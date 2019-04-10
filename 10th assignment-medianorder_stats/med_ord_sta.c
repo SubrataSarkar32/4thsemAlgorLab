@@ -59,7 +59,9 @@ int main()
 	printf("Enter the no of elements ");
 	scanf("%d",&n);
 	printf("Enter all the array elements\n");
-	for(i=0;i<n;i++)scanf("%d",&arr[i]);
+	for(i=0;i<n;i++)arr[i]=rand()%1000;//scanf("%d",&arr[i]);
+	for(i=0;i<n;i++)printf("%d ",arr[i]);
+	printf("/n");
 	printf("Enter the value of k (k th smallest element) ");
 	scanf("%d",&k);
 	if(k>n)
