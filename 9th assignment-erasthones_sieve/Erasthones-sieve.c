@@ -1,8 +1,10 @@
-int const MAX = 2000000;
+#include<stdio.h>
+long long int const MAX = 2000000;
 
-int checkPrime(int n){
-    int range = n;
-    for (int i = 2; i < range; i++){
+int checkPrime(long long int n){
+    long long int range = n;
+    long long int i=2;
+    for (i = 2; i< range; i++){
         if (n%i == 0){
             return 0;
         }
@@ -11,12 +13,17 @@ int checkPrime(int n){
     return 1;
 }
 
-int solution(){
-    double sum = 0;
-    for (int i = 2; i < MAX; i++){
+unsigned long long int solution(){
+    unsigned long long int sum = 0;
+    long long int i=2;
+    for (i = 2; i < MAX; i++){
         if (checkPrime(i) == 1){
             sum += i;
         }
     }
     return sum;
+}
+
+int main(void){
+	printf("Sum of primes upto 2 million is %lld",solution());
 }
